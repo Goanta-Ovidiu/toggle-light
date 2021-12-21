@@ -3,6 +3,7 @@ let lightOn = false;
 let lightOnOff = function () {
   let btn = document.querySelector("button");
   let bodyOff = document.querySelector("body");
+  let txt = document.querySelector("title");
 
   if (lightOn === false) {
     btn.style.backgroundColor = "black";
@@ -10,6 +11,7 @@ let lightOnOff = function () {
     btn.style.color = "white";
     bodyOff.style.backgroundColor = "rgb(54, 54, 54)";
     bodyOff.style.transition = "0.5s ease-in-out";
+    txt.textContent = "Good Night!";
     lightOn = true;
   } else if (lightOn === true) {
     btn.style.backgroundColor = "white ";
@@ -17,6 +19,7 @@ let lightOnOff = function () {
     btn.style.color = "black";
     bodyOff.style.backgroundColor = "white";
     bodyOff.style.transition = "0.5s ease-in-out";
+    txt.textContent = "Good Morning!";
     lightOn = false;
   }
 };
